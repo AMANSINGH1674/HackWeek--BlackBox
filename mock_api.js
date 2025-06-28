@@ -2,8 +2,35 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const app = express();
 const PORT = 3001;
+const cors = require('cors');
+app.use(cors());
 
 app.use(bodyParser.json());
+
+// Enhanced logging middleware: log method, url, body, and response
+app.use((req, res, next) => {
+  console.log(`${req.method} ${req.url}`);
+  if (req.method === 'POST') {
+    let bodyData = '';
+    req.on('data', chunk => { bodyData += chunk; });
+    req.on('end', () => {
+      if (bodyData) {
+        try {
+          console.log('Request body:', JSON.parse(bodyData));
+        } catch {
+          console.log('Request body:', bodyData);
+        }
+      }
+    });
+  }
+  // Capture and log the response body
+  const oldJson = res.json;
+  res.json = function (data) {
+    console.log('Response:', data);
+    oldJson.call(this, data);
+  };
+  next();
+});
 
 // Friendly root route
 app.get('/', (req, res) => {
