@@ -243,3 +243,53 @@ Below are additional sample test cases with expected outputs for each endpoint, 
 
 - `/time` always returns a number that changes (seconds since server start or similar).
 - All other outputs are deterministic and based on the logic described in this report. 
+
+# How to Run and Test Locally
+
+Follow these steps to run and test the project on your machine:
+
+1. **Install dependencies:**
+   ```bash
+   npm install
+   ```
+2. **Start the backend (Express API):**
+   ```bash
+   npm start
+   ```
+   This will start the API server at `http://localhost:3001`.
+
+3. **Serve the frontend:**
+   In a separate terminal, run:
+   ```bash
+   python3 -m http.server 8080
+   ```
+   (Or use any static file server of your choice.)
+
+4. **Open your browser and go to:**
+   ```
+   http://localhost:8080/
+   ```
+   The frontend will load automatically (thanks to `index.html`).
+
+5. **Test the endpoints:**
+   - Use the UI to interact with the API endpoints.
+   - You should see responses in the UI and logs in your backend terminal.
+   - You can also use Postman, curl, or the provided test script:
+     ```bash
+     npm test
+     ```
+
+6. **Verify the connection:**
+   - If you stop the backend and try to use the frontend, you should see errors in the UI, confirming the frontend is connected to your backend.
+
+---
+
+# How This Project Mimics the Vercel App
+
+- **Endpoint Logic:** All API endpoints (`/data`, `/fizzbuzz`, `/zap`, `/alpha`, `/glitch`, `/time`) are implemented to match the behaviors of the original Vercel Blackbox API, as reverse-engineered through extensive testing and comparison.
+- **Frontend-Backend Connection:** The frontend JavaScript was modified to send all API requests to your local backend (`http://localhost:3001`), not the remote Vercel server.
+- **UI Customization:** The look and feel of the frontend have been changed (new CSS, updated text, and layout) so it is visually distinct from the Vercel app, but the functionality and workflow remain the same.
+- **Self-Contained Demo:** You can run both the backend and frontend locally, interact with the endpoints, and see the same behaviors as the Vercel app, but with your own code and customizations.
+- **Testing and Verification:** All behaviors were verified against the official Vercel app, and the project includes automated and manual testing scripts for further validation.
+
+---
