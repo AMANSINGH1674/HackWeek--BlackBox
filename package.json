@@ -1,0 +1,15 @@
+{
+  "name": "blackbox-mock-api",
+  "version": "1.0.0",
+  "description": "Mock API for Blackbox API Challenge, with testing script and documentation.",
+  "main": "mock_api.js",
+  "scripts": {
+    "start": "node mock_api.js",
+    "test": "node test_apis.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "body-parser": "^1.20.2",
+    "node-fetch": "^3.3.2"
+  }
+} 
