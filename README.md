@@ -1,26 +1,3 @@
-# Why This Submission Meets All Requirements
-
-This repository fully satisfies the requirements of the Blackbox API Challenge:
-
-- **API Backend:** `mock_api.js` implements an Express backend that mimics the behavior of all required endpoints (`/data`, `/fizzbuzz`, `/zap`, `/alpha`, `/glitch`, `/time`). The logic for each endpoint was reverse-engineered through extensive experimentation and verified against the official challenge app ([Vercel Blackbox Interface](https://blackbox-interface.vercel.app/)).
-- **Testing Scripts:** `test_apis.js` is a comprehensive automated testing script that sends a wide variety of inputs—including edge cases and additional cases—to all endpoints, logging and verifying the outputs.
-- **Report/Markdown File:** `README.md` (this file) provides:
-  - A submission checklist
-  - An explicit list of endpoints and methods
-  - Detailed documentation and analysis of each endpoint's behavior
-  - Edge case analysis
-  - Sample test cases and expected outputs
-  - Testing methodology and verification steps
-  - Project structure and next steps
-- **Project Structure:** The repository is organized for clarity and ease of use, with all required files included and a `package.json` for easy setup.
-
-**In summary:**
-- Every requirement is addressed: backend, testing, and documentation.
-- All endpoint behaviors and edge cases were verified against the official challenge app.
-- The project is ready for review, sharing, or extension.
-
----
-
 # Blackbox API Challenge — Submission Checklist
 
 ## Submission Requirements Checklist
@@ -155,6 +132,12 @@ This project documents the process of reverse-engineering a set of mysterious AP
 | `/glitch`   | example   | elpmaxe    |
 | `/glitch`   | 12345     | 54321      |
 | `/glitch`   | abc123    | cb132a     |
+
+
+##Pictures of Comparison with Vercel_app
+<img width="1800" alt="Screenshot 2025-06-28 at 9 27 40 PM" src="https://github.com/user-attachments/assets/345b7eb9-f860-4bf4-8dc3-2d1ee0310372" />
+<img width="1800" alt="Screenshot 2025-06-28 at 9 27 48 PM" src="https://github.com/user-attachments/assets/372c67ee-34d0-43b6-ae5c-ae0f05455f7d" />
+
 
 ---
 
