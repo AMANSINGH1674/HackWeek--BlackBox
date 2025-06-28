@@ -164,16 +164,6 @@ This project documents the process of reverse-engineering a set of mysterious AP
 - A mock API was built in Express (`mock_api.js`) to replicate the discovered behaviors.
 - The project is now complete and can be used as a reference, learning artifact, or portfolio piece.
 
-## What's Next?
-- **Polish and Share:** Refine documentation, add code comments, and share your project on GitHub or your portfolio.
-- **Add Features:** Add a friendly root route to the Express app, or implement additional endpoints for fun.
-- **Testing:** Add unit tests for your Express API using Jest or Mocha.
-- **Reflect:** Write a summary of your approach and what you learned.
-- **Explore Further:** Try more creative or extreme edge cases, or deduce the exact logic for `/fizzbuzz` if desired.
-
----
-
-**Congratulations!** You have completed the Blackbox API Challenge with thoroughness and accuracy.
 
 # Sample Test Cases and Expected Outputs
 
